@@ -1,9 +1,9 @@
 from rest_framework.routers import DefaultRouter
 
-from user.serializers import UserSerializer
+from user.api import UserViewSet
 
 router = DefaultRouter()
 
-router.register('/', UserSerializer, basename='user')
+router.register('/', UserViewSet, basename='user')
 
 urlpatterns = router.urls

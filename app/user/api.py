@@ -1,8 +1,8 @@
 from rest_framework import viewsets
 
 from user.models import UserModel
-from user.serializers import UserSerializer
+from user.serializer import UserSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
-    model = UserModel
+    model = UserModel.objects.all()
     serializer_class = UserSerializer
