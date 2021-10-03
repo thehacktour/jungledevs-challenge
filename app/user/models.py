@@ -14,7 +14,8 @@ class UserModel(models.Model):
         ('FEMALE', 'FEMALE'),
     )
 
-    imported_t = models.DateTimeField(auto_now=True, null=True)
+    #resolver esse bug do import
+    imported_t = models.DateTimeField(auto_now=True)
     status = models.CharField('Status', choices=STATUS_OPCOES, default="DRAFT", max_length=50)
     gender = models.CharField('Gender', choices=GENDER_OPCOES, default='MALE', max_length=50)
     title = models.CharField('Title', max_length=50)

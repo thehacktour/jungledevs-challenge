@@ -44,3 +44,7 @@ class UserSerializer(serializers.ModelSerializer):
             "nat",
             "seed",
         )
+
+    def validate(self, data):
+        pass
+    #escrever as validações
