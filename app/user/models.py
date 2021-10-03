@@ -1,17 +1,17 @@
 from django.db import models
 import uuid
 
-class UserModel(models.Model):
 
+class UserModel(models.Model):
     STATUS_OPCOES = (
-        ('DRAFT','DRAFT'),
-        ('TRASH','TRASH'),
-        ('PUBLISHED','PUBLISHED'),
+        ('DRAFT', 'DRAFT'),
+        ('TRASH', 'TRASH'),
+        ('PUBLISHED', 'PUBLISHED'),
     )
 
     GENDER_OPCOES = (
-        ('MALE','MALE'),
-        ('FEMALE','FEMALE'),
+        ('MALE', 'MALE'),
+        ('FEMALE', 'FEMALE'),
     )
 
     imported_t = models.DateTimeField(auto_now=True)
@@ -51,4 +51,4 @@ class UserModel(models.Model):
     age = models.IntegerField('Age', default=18)
 
     def __str__(self):
-        return self.name
+        return self.username
