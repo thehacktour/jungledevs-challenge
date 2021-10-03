@@ -10,3 +10,10 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = UserModel.objects.all()
     serializer_class = UserSerializer
     permission_classes = (DjangoModelPermissions,)
+    filter_backends = (SearchFilter, DjangoFilterBackend, OrderingFilter)
+    search_fields = ("imported_t", )
+    filter_fields = ("imported_t", )
+    ordering_fields = (
+        "imported_t",
+    )
+    ordering = ("imported_t", )
