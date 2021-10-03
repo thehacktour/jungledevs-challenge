@@ -1,15 +1,12 @@
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
+from rest_framework_swagger.views import get_swagger_view
 
-from django.views.generic import TemplateView
+schema_view = get_swagger_view(title='Fedorov API')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    path('swagger-ui/', TemplateView.as_view(
-        template_name='swagger-ui.html',
-        extra_context={'schema_url': 'openapi-schema'}
-    ), name='swagger-ui'),
-
+    url(r'^$', schema_view),
     path('api/oficial/', include('app.user.urls')),
 ]
