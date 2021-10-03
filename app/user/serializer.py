@@ -13,7 +13,8 @@ class UserSerializer(serializers.ModelSerializer):
             "tittle",
             "first",
             "last",
-            "street",
+            "street_number",
+            "street_name",
             "city",
             "state",
             "postcode",
@@ -41,5 +42,5 @@ class UserSerializer(serializers.ModelSerializer):
             "picture_medium",
             "picture_thumbnail",
             "nat",
-            "age",
+            "seed",
         )
