@@ -1,1 +1,0 @@
-python manage.py loaddata fixtures/movimentacao/fases.json
