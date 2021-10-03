@@ -41,5 +41,5 @@ class UserSerializer(serializers.ModelSerializer):
             "picture_medium",
             "picture_thumbnail",
             "nat",
-            "age",
+            "seed",
         )
