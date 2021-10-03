@@ -46,5 +46,23 @@ class UserSerializer(serializers.ModelSerializer):
         )
 
     def validate(self, data):
-        pass
-    #escrever as validações
+        if data.get('first') == 'Atilio':
+            raise serializers.ValidationError(
+                "Aqui não tem erro nenhum. Esse cara é lindo!"
+            )
+        if data.get('phone') == '00000000':
+            raise serializers.ValidationError(
+                "Esse número aí tá paia, hein?"
+            )
+        if data.get('latitude') and data.get('longitude') <=0:
+            raise serializers.ValidationError(
+                "Onde você ta, parceiro? Essa localização ai ta zoada!"
+            )
+        if data.get('password') == data.get('username'):
+            raise serializers.ValidationError(
+                "Isso daí ta errado, hein? Procura uma senha diferente, fião!"
+            )
+        if data.get('picture_medium') > data.get('picture.large'):
+            raise serializers.ValidationError(
+                "Hmmmm, que mundo é esse que a media é menor que a grande? "
+            )
