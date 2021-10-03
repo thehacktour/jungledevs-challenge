@@ -1,17 +1,16 @@
 [
   {
-    "model": "app.user",
+    "model": "app.user.UserModel",
     "pk": 1,
     "fields": {
       "gender":"male",
       "title":"Mr",
       "first":"Albert",
       "last":"Soto",
-      "street_name":"Avenida de Burgos",
       "street_number":7534,
+      "street_name":"Avenida de Burgos",
       "city":"Madrid",
       "state":"Castilla la Mancha",
-      "country":"Spain",
       "postcode":35150,
       "latitude":"-26.3634",
       "longitude":"-31.8796",
