@@ -11,6 +11,8 @@ djangorestframework = "^3.12.4"
 pre-commit = "^2.15.0"
 djangorestframework-api-key = "2.*"
 django-filter = "^21.1"
+djangorestframework-swagger = "^0.2.2"
+django-rest-swagger = "^2.2.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
