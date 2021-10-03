@@ -10,7 +10,7 @@ class UserSerializer(serializers.ModelSerializer):
             "imported_t",
             "status",
             "gender",
-            "tittle",
+            "title",
             "first",
             "last",
             "street_number",
