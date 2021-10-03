@@ -20,7 +20,8 @@ class UserModel(models.Model):
     title = models.CharField('Title', max_length=50)
     first = models.CharField('First', max_length=50)
     last = models.CharField('Last', max_length=50)
-    street = models.CharField('Street', max_length=50)
+    street_number = models.IntegerField('Street Number', default=None)
+    street_name = models.CharField('Street Name', max_length=50)
     city = models.CharField('City', max_length=50)
     state = models.CharField('State', max_length=50)
     postcode = models.IntegerField('Postcode', default=None)
@@ -48,7 +49,7 @@ class UserModel(models.Model):
     picture_medium = models.TextField('Picture Medium', max_length=70)
     picture_thumbnail = models.TextField('Picture Thumbnail', max_length=50)
     nat = models.CharField('Nat', max_length=30)
-    age = models.IntegerField('Age', default=18)
+    seed = models.IntegerField('Seed', default=None)
 
     def __str__(self):
         return self.username
