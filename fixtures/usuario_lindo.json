@@ -1,6 +1,6 @@
 [
   {
-    "model": "app.user.UserModel",
+    "model": "user.UserModel",
     "pk": 1,
     "fields": {
       "gender":"male",
@@ -36,6 +36,6 @@
       "picture_thumbnail":"https://randomuser.me/api/portraits/thumb/men/69.jpg",
       "nat":"ES",
       "seed":"63fd044916e0825a"
-    },
+    }
   }
 ]

@@ -25,9 +25,9 @@ class UserModel(models.Model):
     city = models.CharField('City', max_length=50)
     state = models.CharField('State', max_length=50)
     postcode = models.IntegerField('Postcode', default=None)
-    latitude = models.IntegerField('Latitude', default=None)
-    longitude = models.IntegerField('Longitude', default=None)
-    offset = models.TimeField('Offset', default=None)
+    latitude = models.CharField('Latitude', default=None, max_length=50)
+    longitude = models.CharField('Longitude', default=None, max_length=50)
+    offset = models.CharField('Offset', default=None, max_length=50)
     description = models.CharField('Description', max_length=50)
     email = models.EmailField('Email', max_length=50, default=None)
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -49,7 +49,7 @@ class UserModel(models.Model):
     picture_medium = models.TextField('Picture Medium', max_length=70)
     picture_thumbnail = models.TextField('Picture Thumbnail', max_length=50)
     nat = models.CharField('Nat', max_length=30)
-    seed = models.IntegerField('Seed', default=None)
+    seed = models.CharField('Seed', default=None, max_length=70)
 
     def __str__(self):
         return self.username
