@@ -23,7 +23,7 @@ class UserModel(models.Model):
     street = models.CharField('Street', max_length=50)
     city = models.CharField('City', max_length=50)
     state = models.CharField('State', max_length=50)
-    postcode = models.IntegerField('Postcode', max_length=50)
+    postcode = models.IntegerField('Postcode', default=None)
     latitude = models.IntegerField('Latitude', default=None)
     longitude = models.IntegerField('Longitude', default=None)
     offset = models.TimeField('Offset', default=None)
