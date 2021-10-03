@@ -22,7 +22,6 @@ class UserSerializer(serializers.ModelSerializer):
             "offset",
             "description",
             "email",
-            "uuid",
             "username",
             "password",
             "salt",
