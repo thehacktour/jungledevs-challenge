@@ -40,4 +40,7 @@
 ### https://github.com/thehacktour/jungledevs-challenge
 
 
+# by: Atilio Héctor Goulart de Jesus
+## E-mail: atiliogoulart@gmail.com
+
 # Challenge by Coodesh! :)
