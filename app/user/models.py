@@ -14,6 +14,7 @@ class UserModel(models.Model):
         ('FEMALE', 'FEMALE'),
     )
 
+    #resolver esse bug do import
     imported_t = models.DateTimeField(auto_now=True)
     status = models.CharField('Status', choices=STATUS_OPCOES, default="DRAFT", max_length=50)
     gender = models.CharField('Gender', choices=GENDER_OPCOES, default='MALE', max_length=50)
@@ -25,9 +26,9 @@ class UserModel(models.Model):
     city = models.CharField('City', max_length=50)
     state = models.CharField('State', max_length=50)
     postcode = models.IntegerField('Postcode', default=None)
-    latitude = models.IntegerField('Latitude', default=None)
-    longitude = models.IntegerField('Longitude', default=None)
-    offset = models.TimeField('Offset', default=None)
+    latitude = models.CharField('Latitude', default=None, max_length=50)
+    longitude = models.CharField('Longitude', default=None, max_length=50)
+    offset = models.CharField('Offset', default=None, max_length=50)
     description = models.CharField('Description', max_length=50)
     email = models.EmailField('Email', max_length=50, default=None)
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -41,15 +42,15 @@ class UserModel(models.Model):
     dob_age = models.IntegerField('Dob Age', default=None)
     registered_date = models.DateTimeField('Registered Date', default=None)
     registered_age = models.IntegerField('Registered Age', default=18)
-    phone = models.CharField('Phone', max_length=20)
-    cell = models.CharField('Cell', max_length=20)
+    phone = models.CharField('Phone', max_length=8)
+    cell = models.CharField('Cell', max_length=9)
     id_name = models.CharField('ID Name', max_length=30)
     id_value = models.CharField('ID Value', max_length=50)
     picture_large = models.TextField('Picture Large', max_length=100)
     picture_medium = models.TextField('Picture Medium', max_length=70)
     picture_thumbnail = models.TextField('Picture Thumbnail', max_length=50)
     nat = models.CharField('Nat', max_length=30)
-    seed = models.IntegerField('Seed', default=None)
+    seed = models.CharField('Seed', default=None, max_length=70)
 
     def __str__(self):
         return self.username

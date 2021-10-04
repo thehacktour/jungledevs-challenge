@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.8
 
 ENV PIP_DISABLE_PIP_VERSION_CHECK=on
 
@@ -12,4 +12,4 @@ RUN poetry install --no-interaction
 
 COPY . /app
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000" --noreload]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
