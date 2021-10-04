@@ -5,14 +5,14 @@
 
 ### Here our tech staff:
 
-##### - Python
-##### - Django
-##### - Django Rest Framework
-##### - Docker
-##### - Poetry
-##### - Travis (CI/CD)
-##### - Swagger
-##### - etc
+##### º Python
+##### º Django
+##### º Django Rest Framework
+##### º Docker
+##### º Poetry
+##### º Travis (CI/CD)
+##### º Swagger
+##### º etc
 
 ### How to use:
 
