@@ -14,8 +14,7 @@ class UserModel(models.Model):
         ('FEMALE', 'FEMALE'),
     )
 
-    #resolver esse bug do import
-    imported_t = models.DateTimeField(auto_now=True)
+    imported_t = models.DateTimeField(auto_now_add=True, null=True)
     status = models.CharField('Status', choices=STATUS_OPCOES, default="DRAFT", max_length=50)
     gender = models.CharField('Gender', choices=GENDER_OPCOES, default='MALE', max_length=50)
     title = models.CharField('Title', max_length=50)
@@ -31,7 +30,7 @@ class UserModel(models.Model):
     offset = models.CharField('Offset', default=None, max_length=50)
     description = models.CharField('Description', max_length=50)
     email = models.EmailField('Email', max_length=50, default=None)
-    uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    uuid = models.UUIDField(primary_key=True, unique=True, default=uuid.uuid4, editable=False)
     username = models.CharField('Username', max_length=50)
     password = models.CharField('Password', max_length=50)
     salt = models.CharField('Salt', max_length=50)
