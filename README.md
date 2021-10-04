@@ -18,6 +18,8 @@
 
 #### First it all, we'll download the project or clone it.
 
+### OBS: Docker is already done to be used, but... I prefer use just the way bellow and use Docker just for deploy! Go ahead!
+
 #### Now, we use `poetry` to do everything inside the project, so, if you dont have it in your machine, download it using this website:
 
 ##### - https://python-poetry.org/docs/
