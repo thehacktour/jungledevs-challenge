@@ -5,7 +5,7 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.permissions import IsAuthenticated
 
 from .models import UserModel
-from .serializer import UserSerializer
+from .serializer import UserSerializer, UserSerializerExpand
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = UserModel.objects.all()
@@ -31,5 +31,25 @@ class UserViewSet(viewsets.ModelViewSet):
     )
     ordering = (
         "uuid",
+        "username",
+    )
+
+class UserExpandableViewSet(viewsets.ModelViewSet):
+    queryset = UserModel.objects.all()
+    serializer_class = UserSerializerExpand
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
+    filter_backends = (SearchFilter, DjangoFilterBackend, OrderingFilter)
+
+    search_fields = (
+        "username",
+    )
+    filter_fields = (
+        "username",
+        )
+    ordering_fields = (
+        "username",
+    )
+    ordering = (
         "username",
     )
