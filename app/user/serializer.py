@@ -8,6 +8,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserModel
         fields = (
+            "pk",
             "imported_t",
             "status",
             "gender",
