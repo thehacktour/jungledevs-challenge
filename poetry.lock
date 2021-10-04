@@ -187,6 +187,14 @@ pyyaml = "*"
 uritemplate = "*"
 
 [[package]]
+name = "drf-flex-fields"
+version = "0.9.4"
+description = "Flexible, dynamic fields and nested resources for Django REST Framework serializers."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "drf-yasg"
 version = "1.20.0"
 description = "Automated generation of real Swagger/OpenAPI 2.0 schemas from Django Rest Framework code."
@@ -546,7 +554,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "c8b7e193a55ce3bece1cdd7204b4f8a29d40f3f576761bc3922b4f3ce81079a8"
+content-hash = "84e5a93f8a44c4eb004f8959b7ba4fb156a2c7b235db43a286bd95b8cb262a9c"
 
 [metadata.files]
 asgiref = [
@@ -615,6 +623,9 @@ djangorestframework-api-key = [
 ]
 djangorestframework-swagger = [
     {file = "djangorestframework-swagger-0.2.2.tar.gz", hash = "sha256:17ac38409f5244e2f956f23f9f71b50e8167c777a9ea59d68c66cee9829b5d4f"},
+]
+drf-flex-fields = [
+    {file = "drf-flex-fields-0.9.4.tar.gz", hash = "sha256:179297bfd2e0f37248bf36ab689574f3be7c6fb15cc299734ba7b147e3388af0"},
 ]
 drf-yasg = [
     {file = "drf-yasg-1.20.0.tar.gz", hash = "sha256:d50f197c7f02545d0b736df88c6d5cf874f8fea2507ad85ad7de6ae5bf2d9e5a"},
