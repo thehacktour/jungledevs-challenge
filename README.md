@@ -26,6 +26,8 @@
 
 #### After this, you can use the command `poetry shell` to get in inside the poetry dependencies management. Here you can use all the dependencies that are inside this project and add or remove new dependencies.
 
+### You will need to load the users that are inside app/fixtures/usuario_lindo.json. To load those users, just use the command: `python3 manage.py loaddata app/fixtures/usuario_lindo.json`. Very very easy!
+
 ### Now, just run the command `python3 manage.py runserver` and enjoy the project! :D
 
 
