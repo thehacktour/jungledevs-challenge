@@ -8,7 +8,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserModel
         fields = (
-            "pk",
+            "id",
             "imported_t",
             "status",
             "gender",
