@@ -27,14 +27,9 @@ class UserViewSet(viewsets.ModelViewSet):
         "username",
         )
     ordering_fields = (
-        "imported_t",
-        "status",
         "uuid",
-        "username",
     )
     ordering = (
-        "imported_t",
-        "status",
         "uuid",
         "username",
     )
