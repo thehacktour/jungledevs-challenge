@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
 from .models import UserModel
+from . import mensagens
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -44,6 +45,20 @@ class UserSerializer(serializers.ModelSerializer):
             "nat",
             "seed",
         )
+
+    def __init__(self, *args, **kwargs):
+        super(UserSerializer, self).__init__(*args, **kwargs)
+
+        mandatory_fields = {
+            "username": mensagens.MSG2.format(u"Usuario"),
+            "password": mensagens.MSG2.format(u"Senha"),
+            "email": mensagens.MSG2.format(u"Email"),
+        }
+
+        for key, value in mandatory_fields.items():
+            self.fields[key].error_messages["required"] = value
+            self.fields[key].error_messages["blank"] = value
+            self.fields[key].error_messages["null"] = value
 
     def validate(self, data):
         if data.get('first') == 'Atilio':
