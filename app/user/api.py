@@ -15,6 +15,7 @@ class UserViewSet(viewsets.ModelViewSet):
     filter_backends = (SearchFilter, DjangoFilterBackend, OrderingFilter)
 
     search_fields = (
+        "pk",
         "imported_t",
         "status",
         "gender",
@@ -52,6 +53,7 @@ class UserViewSet(viewsets.ModelViewSet):
         "seed",
     )
     filter_fields = (
+        "pk",
         "imported_t",
         "status",
         "gender",
@@ -89,6 +91,7 @@ class UserViewSet(viewsets.ModelViewSet):
         "seed",
         )
     ordering_fields = (
+        "pk",
         "imported_t",
         "status",
         "gender",
@@ -126,6 +129,7 @@ class UserViewSet(viewsets.ModelViewSet):
         "seed",
     )
     ordering = (
+        "pk",
         "imported_t",
         "status",
         "gender",
