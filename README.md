@@ -28,6 +28,8 @@
 
 ### You will need to load the users that are inside app/fixtures/usuario_lindo.json. To load those users, just use the command: `python3 manage.py loaddata app/fixtures/usuario_lindo.json`. Very very easy!
 
+## Remember, you can see the users using some database manipulator, like dbeaver, ok? Its easiest.
+
 ### Now, just run the command `python3 manage.py runserver` and enjoy the project! :D
 
 
