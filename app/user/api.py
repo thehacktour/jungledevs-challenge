@@ -13,6 +13,7 @@ class UserViewSet(viewsets.ModelViewSet):
     authentication_classes = [SessionAuthentication, BasicAuthentication]
     permission_classes = [IsAuthenticated]
     filter_backends = (SearchFilter, DjangoFilterBackend, OrderingFilter)
+
     search_fields = (
         "imported_t",
         "status",
