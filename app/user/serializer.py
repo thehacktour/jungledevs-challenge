@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from rest_flex_fields import FlexFieldsModelSerializer
 
 from .models import UserModel
 from . import mensagens
@@ -60,6 +61,8 @@ class UserSerializer(serializers.ModelSerializer):
             self.fields[key].error_messages["blank"] = value
             self.fields[key].error_messages["null"] = value
 
+
+
     def validate(self, data):
         if data.get('first') == 'Atilio':
             raise serializers.ValidationError(
@@ -81,3 +84,11 @@ class UserSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 "Hmmmm, que mundo é esse que a media é menor que a grande? "
             )
+
+class UserSerializerExpand(FlexFieldsModelSerializer):
+    class Meta:
+        model = UserModel
+        fields = '__all__'
+        expandable_fields = {
+            'username': (UserSerializer, {'many':True}),
+        }

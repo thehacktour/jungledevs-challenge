@@ -3,22 +3,20 @@
 
 ## This is a good API where you can add some users and do some cool sttufs! ;)
 
-### Here our tech staff:
+### Here our tech stack:
 
-##### º Python
-##### º Django
-##### º Django Rest Framework
-##### º Docker
-##### º Poetry
-##### º Travis (CI/CD)
-##### º Swagger
-##### º etc
+###### º Python
+###### º Django
+###### º Django Rest Framework
+###### º Docker
+###### º Poetry
+###### º Travis (CI/CD)
+###### º Swagger
+###### º etc
 
 ### How to use:
 
-#### First it all, we'll download the project or clone it using:
-
-##### - git@github.com:thehacktour/jungledevs-challenge.git
+#### First it all, we'll download the project or clone it.
 
 #### Now, we use `poetry` to do everything inside the project, so, if you dont have it in your machine, download it using this website:
 
@@ -28,4 +26,16 @@
 
 #### After this, you can use the command `poetry shell` to get in inside the poetry dependencies management. Here you can use all the dependencies that are inside this project and add or remove new dependencies.
 
+### You will need to load the users that are inside app/fixtures/usuario_lindo.json. To load those users, just use the command: `python3 manage.py loaddata app/fixtures/usuario_lindo.json`. Very very easy!
+
+## Remember, you can see the users using some database manipulator, like dbeaver, ok? Its easiest.
+
 ### Now, just run the command `python3 manage.py runserver` and enjoy the project! :D
+
+
+## The project is on my personal github bellow:
+
+### https://github.com/thehacktour/jungledevs-challenge
+
+
+# Challenge by Coodesh! :)
