@@ -35,11 +35,3 @@ class UserSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 "Isso daí ta errado, hein? Procura uma senha diferente, fião!"
             )
-
-class UserSerializerExpand(FlexFieldsModelSerializer):
-    class Meta:
-        model = UserModel
-        fields = '__all__'
-        expandable_fields = {
-            'username': (UserSerializer, {'many':True}),
-        }
