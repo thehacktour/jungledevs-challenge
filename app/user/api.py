@@ -13,8 +13,8 @@ from .serializer import UserSerializer
 class UserViewSet(viewsets.ModelViewSet):
     queryset = UserModel.objects.all()
     serializer_class = UserSerializer
-    authentication_classes = [SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAuthenticated]
+    #authentication_classes = [SessionAuthentication, BasicAuthentication]
+    #permission_classes = [IsAuthenticated]
     filter_backends = (SearchFilter, DjangoFilterBackend, OrderingFilter)
 
     search_fields = (
