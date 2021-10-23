@@ -8,7 +8,7 @@ from app.user import mensagens
 from rest_framework import status
 
 from .models import UserModel
-from .serializer import UserSerializer, UserSerializerExpand
+from .serializer import UserSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = UserModel.objects.all()
