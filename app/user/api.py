@@ -18,15 +18,9 @@ class UserViewSet(viewsets.ModelViewSet):
     filter_backends = (SearchFilter, DjangoFilterBackend, OrderingFilter)
 
     search_fields = (
-        "imported_t",
-        "status",
-        "uuid",
         "username",
     )
     filter_fields = (
-        "imported_t",
-        "status",
-        "uuid",
         "username",
         )
     ordering_fields = (
@@ -53,23 +47,3 @@ class UserViewSet(viewsets.ModelViewSet):
             return Response(
                 {"detail": mensagens.MSG_ERRO}, status=status.HTTP_400_BAD_REQUEST
             )
-
-class UserExpandableViewSet(viewsets.ModelViewSet):
-    queryset = UserModel.objects.all()
-    serializer_class = UserSerializerExpand
-    authentication_classes = [SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAuthenticated]
-    filter_backends = (SearchFilter, DjangoFilterBackend, OrderingFilter)
-
-    search_fields = (
-        "username",
-    )
-    filter_fields = (
-        "username",
-        )
-    ordering_fields = (
-        "username",
-    )
-    ordering = (
-        "username",
-    )
