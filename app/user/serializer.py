@@ -1,8 +1,12 @@
 from rest_framework import serializers
 
-from .models import UserModel
+from .models import UserModel, PointsUser
 from . import mensagens
 
+class PointsUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PointsUser
+        fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -26,4 +30,3 @@ class UserSerializer(serializers.ModelSerializer):
             self.fields[key].error_messages["required"] = value
             self.fields[key].error_messages["blank"] = value
             self.fields[key].error_messages["null"] = value
-            

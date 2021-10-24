@@ -7,8 +7,8 @@ from rest_framework.response import Response
 from app.user import mensagens
 from rest_framework import status
 
-from .models import UserModel
-from .serializer import UserSerializer
+from .models import UserModel, PointsUser
+from .serializer import UserSerializer, PointsUserSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = UserModel.objects.all()
@@ -49,3 +49,10 @@ class UserViewSet(viewsets.ModelViewSet):
             return Response(
                 {"detail": mensagens.MSG_ERRO}, status=status.HTTP_400_BAD_REQUEST
             )
+
+class PointsViewSet(viewsets.ModelViewSet):
+    queryset = PointsUser.objects.all()
+    serializer_class = PointsUserSerializer
+    permission_classes = (IsAuthenticated, )
+    authentication_classes = (SessionAuthentication, BasicAuthentication, TokenAuthentication)
+    filter_backends = (SearchFilter, DjangoFilterBackend, OrderingFilter)
