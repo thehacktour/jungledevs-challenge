@@ -26,12 +26,4 @@ class UserSerializer(serializers.ModelSerializer):
             self.fields[key].error_messages["required"] = value
             self.fields[key].error_messages["blank"] = value
             self.fields[key].error_messages["null"] = value
-
-
-
-    def validate(self, data):
-        
-        if data.get('password') == data.get('username'):
-            raise serializers.ValidationError(
-                "Isso daí ta errado, hein? Procura uma senha diferente, fião!"
-            )
+            
