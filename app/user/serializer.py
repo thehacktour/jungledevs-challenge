@@ -1,12 +1,7 @@
 from rest_framework import serializers
 
-from .models import UserModel, PointsUser
+from .models import UserModel
 from . import mensagens
-
-class PointsUserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = PointsUser
-        fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
