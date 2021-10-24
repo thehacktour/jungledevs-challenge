@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.authentication import SessionAuthentication, BasicAuthentication
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication, TokenAuthentication
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -13,8 +13,8 @@ from .serializer import UserSerializer
 class UserViewSet(viewsets.ModelViewSet):
     queryset = UserModel.objects.all()
     serializer_class = UserSerializer
-    #authentication_classes = [SessionAuthentication, BasicAuthentication]
-    #permission_classes = [IsAuthenticated]
+    permission_classes = (IsAuthenticated, )
+    authentication_classes = (SessionAuthentication, BasicAuthentication, TokenAuthentication)
     filter_backends = (SearchFilter, DjangoFilterBackend, OrderingFilter)
 
     search_fields = (
