@@ -11,6 +11,7 @@ class UserSerializer(serializers.ModelSerializer):
             "uuid",
             "username",
             "password",
+            "points"
         )
 
     def __init__(self, *args, **kwargs):

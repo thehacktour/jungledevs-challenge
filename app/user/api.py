@@ -25,10 +25,12 @@ class UserViewSet(viewsets.ModelViewSet):
         )
     ordering_fields = (
         "uuid",
+        "points",
     )
     ordering = (
         "uuid",
         "username",
+        "points",
     )
 
     def create(self, request, *args, **kwargs):
