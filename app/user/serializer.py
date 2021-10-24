@@ -9,7 +9,6 @@ class UserSerializer(serializers.ModelSerializer):
         fields = (
             "uuid",
             "username",
-            "password",
             "points"
         )
 
@@ -18,7 +17,7 @@ class UserSerializer(serializers.ModelSerializer):
 
         mandatory_fields = {
             "username": mensagens.MSG2.format(u"Usuario"),
-            "password": mensagens.MSG2.format(u"Senha"),
+            "points":mensagens.MSG2.format(u"Points"),
         }
 
         for key, value in mandatory_fields.items():

@@ -33,7 +33,7 @@ class UserViewSet(viewsets.ModelViewSet):
         "points",
     )
 
-    def create(self, request, *args, **kwargs):
+    def create(self, request, pk , *args, **kwargs):
         try:
             return super(UserViewSet, self).create(request, *args, **kwargs)
         except KeyError:
