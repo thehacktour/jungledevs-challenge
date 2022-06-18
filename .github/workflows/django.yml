@@ -24,8 +24,8 @@ jobs:
     - name: Install Dependencies
       run: |
         pip install poetry
-        poetry install
         poetry shell
-    # - name: Run Tests
-    #   run: |
-    #     python manage.py test
+        poetry install
+    - name: Run Tests
+      run: |
+        python manage.py test
