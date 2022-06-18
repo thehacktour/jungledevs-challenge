@@ -155,4 +155,3 @@ STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }
-
