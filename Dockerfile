@@ -12,7 +12,6 @@ RUN poetry install --no-interaction
 
 COPY . /app
 
-EXPOSE 8000
+EXPOSE 5000
 STOPSIGNAL SIGINT
-ENTRYPOINT ["python", "manage.py"]
-CMD ["runserver", "0.0.0.0:8000"]
+ENTRYPOINT ["python3", "app.py"]
