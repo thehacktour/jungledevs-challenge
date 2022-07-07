@@ -1,4 +1,4 @@
-## MMA Oficial Bot
+## Impostor Bot Oficial
 
-# by: Atilio Héctor
+# by: Héctor
 ## E-mail: thehacktour@gmail.com
